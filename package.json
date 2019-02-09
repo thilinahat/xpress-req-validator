@@ -1,0 +1,42 @@
+{
+    "name": "req-validator",
+    "version": "0.0.1",
+    "description": "hazzle free request validation middleware",
+    "main": "index.js",
+    "scripts": {
+        "test": "yarn test",
+        "eslint": "eslint 'lib/**/*.js'",
+        "eslint-fix": "eslint 'lib/**/*.js' --fix",
+        "prettier": "prettier --config ./.prettierrc --write 'lib/**/*.js'"
+    },
+    "pre-commit": [
+        "eslint-fix",
+        "prettier"
+    ],
+    "pre-push": [],
+    "keywords": [
+        "request",
+        "validation",
+        "middleware"
+    ],
+    "author": "IamThilina",
+    "license": "ISC",
+    "dependencies": {
+        "joi": "^14.3.1",
+        "path-to-regexp": "^3.0.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.2.3",
+        "@babel/core": "^7.2.2",
+        "@babel/preset-env": "^7.3.1",
+        "eslint": "^5.13.0",
+        "eslint-config-prettier": "^4.0.0",
+        "gulp": "^4.0.0",
+        "gulp-babel": "^8.0.0",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-watch": "^5.0.1",
+        "pre-commit": "^1.2.2",
+        "pre-push": "^0.1.1",
+        "prettier": "^1.16.4"
+    }
+}
