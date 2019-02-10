@@ -4,13 +4,13 @@ const babel = require('gulp-babel');
 const watch = require('gulp-watch');
 
 const release_build = () =>
-    gulp.src('index.js')
+    gulp.src('lib/**/*.js')
         .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ['@babel/env']
         }))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist/lib'));
 
 gulp.task('release-build', release_build);
 

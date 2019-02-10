@@ -1,0 +1,28 @@
+# Source Files and dev tools
+lib/
+gulpfile.js
+docs
+
+# Tests and Test examples
+# TODO Following line should be uncommented later
+# dist/tester.js
+
+# Config Files
+LICENSE
+.idea
+.eslintrc
+.gitignore
+.eslintignore
+.babelrc
+.codeclimate.yml
+.travis.yml
+.prettierrc
+
+# Auto Generating Files
+yarn.lock
+coverage/
+.nyc_output/
+
+# Other files
+CONTRIBUTING.md
+logo.png

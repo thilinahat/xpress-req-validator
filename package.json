@@ -1,6 +1,6 @@
 {
-    "name": "req-validator",
-    "version": "0.0.1",
+    "name": "xpress-req-validator",
+    "version": "1.0.0",
     "description": "hazzle free request validation middleware",
     "main": "index.js",
     "scripts": {
@@ -16,11 +16,13 @@
     "pre-push": [],
     "keywords": [
         "request",
-        "validation",
-        "middleware"
+        "request validation",
+        "middleware",
+        "validation middleware",
+        "Joi validation middleware"
     ],
     "author": "IamThilina",
-    "license": "ISC",
+    "license": "MIT",
     "dependencies": {
         "joi": "^14.3.1",
         "path-to-regexp": "^3.0.0"
