@@ -4,14 +4,15 @@
     "description": "hazzle free request validation middleware",
     "main": "index.js",
     "scripts": {
-        "test": "yarn test",
+        "test": "jest --coverage lib/**/*.test.js",
         "eslint": "eslint 'lib/**/*.js'",
         "eslint-fix": "eslint 'lib/**/*.js' --fix",
         "prettier": "prettier --config ./.prettierrc --write 'lib/**/*.js'"
     },
     "pre-commit": [
         "eslint-fix",
-        "prettier"
+        "prettier",
+        "test"
     ],
     "pre-push": [],
     "keywords": [
@@ -24,8 +25,7 @@
     "author": "IamThilina",
     "license": "MIT",
     "dependencies": {
-        "joi": "^14.3.1",
-        "path-to-regexp": "^3.0.0"
+        "joi": "^14.3.1"
     },
     "devDependencies": {
         "@babel/cli": "^7.2.3",
@@ -36,7 +36,7 @@
         "gulp": "^4.0.0",
         "gulp-babel": "^8.0.0",
         "gulp-sourcemaps": "^2.6.4",
-        "gulp-watch": "^5.0.1",
+        "jest": "^24.1.0",
         "pre-commit": "^1.2.2",
         "pre-push": "^0.1.1",
         "prettier": "^1.16.4"

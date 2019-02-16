@@ -2,7 +2,7 @@
   "env": {
     "node": true,
     "es6": true,
-    "mocha": true
+    "jest": true
   },
   "plugins": [],
   "parserOptions": {
@@ -41,7 +41,6 @@
     "comma-spacing": ["error"],
     "eol-last": ["error"],
     "consistent-this": ["error", "_this"],
-    "comma-dangle": ["error", "never"],
     "indent": ["error", 4, { "SwitchCase": 1 }],
     "key-spacing": ["error", { "mode": "strict" }],
     "max-depth": ["error", 5],
@@ -68,6 +67,5 @@
     // Variables
     "no-undef-init": ["error"],
     "no-use-before-define": ["error"],
-    "prefer-object-spread/prefer-object-spread": ["error"]
   }
 }

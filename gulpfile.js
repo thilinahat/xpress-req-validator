@@ -1,7 +1,6 @@
 const gulp = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
-const watch = require('gulp-watch');
 
 const release_build = () =>
     gulp.src('lib/**/*.js')
@@ -14,15 +13,9 @@ const release_build = () =>
 
 gulp.task('release-build', release_build);
 
-gulp.task('default', () => {
-    return watch('index.js', { ignoreInitial: false }, () => {
-        gulp.src('index.js')
-            .pipe(sourcemaps.init())
-            .pipe(babel({
-                presets: ['@babel/env']
-            }))
-            .pipe(sourcemaps.write('.'))
-            .pipe(gulp.dest('dist'));
-    })
+gulp.task('dev-build', function () {
+    gulp.watch('lib/**/*.js', release_build);
 });
+
+gulp.task('default', release_build);
 
