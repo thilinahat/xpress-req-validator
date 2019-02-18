@@ -7,7 +7,8 @@
         "test": "jest --coverage lib/**/*.test.js",
         "eslint": "eslint 'lib/**/*.js'",
         "eslint-fix": "eslint 'lib/**/*.js' --fix",
-        "prettier": "prettier --config ./.prettierrc --write 'lib/**/*.js'"
+        "prettier": "prettier --config ./.prettierrc --write 'lib/**/*.js'",
+        "build": "npx gulp release-build"
     },
     "pre-commit": [
         "eslint-fix",
