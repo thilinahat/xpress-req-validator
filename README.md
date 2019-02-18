@@ -2,7 +2,9 @@
 
 Hassle free middleware to validate all type of requests in a single place while respecting the principle of separation of concerns
 
-[npm][build-sucess] [coverage-100%][eslint-pass] [vulnerbaility-0]
+[npm]
+[![Build Status](https://travis-ci.org/IamThilina/xpress-req-validator.svg?branch=master)](https://travis-ci.org/IamThilina/xpress-req-validator)
+ [coverage-100%][eslint-pass] [vulnerbaility-0]
 
 ## Introduction
 

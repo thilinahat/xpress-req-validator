@@ -9,3 +9,5 @@ jobs:
     script: yarn test
   - stage: build
     script: yarn build
+
+after_success: yarn run coverage
