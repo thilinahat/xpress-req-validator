@@ -2,10 +2,16 @@
 
 Hassle free middleware to validate all type of requests in a single place while respecting the principle of separation of concerns
 
-[npm]
 [![Build Status](https://travis-ci.org/IamThilina/xpress-req-validator.svg?branch=master)](https://travis-ci.org/IamThilina/xpress-req-validator)
- [coverage-100%][eslint-pass] [vulnerbaility-0]
-
+[![Coverage Status](https://coveralls.io/repos/github/IamThilina/xpress-req-validator/badge.svg?branch=master)](https://coveralls.io/github/IamThilina/xpress-req-validator?branch=master)
+[![Code Climate](https://codeclimate.com/github/IamThilina/xpress-req-validator/badges/gpa.svg)](https://codeclimate.com/github/IamThilina/xpress-req-validator)
+[![Known Vulnerabilities](https://snyk.io/test/github/IamThilina/xpress-req-validator/badge.svg?targetFile=package.json)](https://snyk.io/test/github/IamThilina/xpress-req-validator?targetFile=package.json)
+<a href="#badge">
+<img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square">
+</a>
+<a href="#badge">
+<img alt="linter: eslint" src="https://img.shields.io/badge/linter-eslint-9cf.svg">
+</a>
 ## Introduction
 
 `xpress-req-validator` allows developers to handle all request validation tasks in a single place as a middleware while respecting the principle of separation of concerns.
