@@ -1,14 +1,14 @@
 # [LOGO] Request Validator
 
-Hazzle free middleware to validate all type of requests in a single place as a middleware by respecting the principle of separation of concerns
+Hassle free middleware to validate all type of requests in a single place while respecting the principle of separation of concerns
 
-[npm] [build-sucess] [coverage-100%] [eslint-pass] [vulnerbaility-0]
+[npm][build-sucess] [coverage-100%][eslint-pass] [vulnerbaility-0]
 
 ## Introduction
 
-xpress-req-validator allows developers to handle all request validation tasks in a single place as a middleware by respecting the principle of separation of concerns.
+`xpress-req-validator` allows developers to handle all request validation tasks in a single place as a middleware while respecting the principle of separation of concerns.
 It can be used at app level or router level.
-xpress-req-validator relies on [Joi](https://github.com/hapijs/joi) (the awsome JSON Schema validator), which is used to define the request validation specs
+`xpress-req-validator` relies on [Joi](https://github.com/hapijs/joi) (the awsome JSON Schema validator), which is used to define the request validation specs
 
 ## Table of Contents
 
@@ -26,7 +26,7 @@ Request validation is a must when developing an API. Express allows following me
 
 ```node
 router.post('/device/data', (req, res) => {
-        const {deviceID, serialNo} = req.nody;
+        const {deviceID, serialNo} = req.body;
         if(!deviceID || !serialNo) {
             const err = new Error('invalid parameters')
             res.status(400).json({err})
@@ -44,10 +44,10 @@ router.post('/device/data', deviceDataValidationMiddleware, (req, res) => {
 }
 ```
 
-Method-1 is an ugly and painful way of achieving request validation. Method-2 is comparatively better, but it still requires you to write ton of middleware.
-Both methods demand a significant effort to unit test the route handler. 
+Method-1 is an ugly and painful way of achieving request validation. Method-2 is comparatively better, but still requires you to write a ton of middleware.
+Both methods demand a significant effort to unit test the route handler.
 
-There has to be a better way of validating requests with less testing effort and of course by separating the concerns. xpress-req-validator is the option.
+There has to be a better way of validating requests with less unit testing effort and of course by separating the concerns. `xpress-req-validator` is the solution.
 It allows developers to define all their request validation specs in a single place, make route handling code snippets much cleaner and finally reducing the unit test effort
 
 ### Installation
@@ -55,13 +55,74 @@ It allows developers to define all their request validation specs in a single pl
 ```node
 yarn add xpress-req-validator
 ```
+
 or
+
 ```node
 npm install xpress-req-validator
 ```
 
 ### Basic Usage
 
+Assume that we need to validate the request body of `deviceRouter.post('/device', ()=> {})`
+
+> first we must define the validation spec for request body using Joi
+
+`spec.js`
+```node
+import Joi from 'joi';
+
+export const DEVICE_SPEC = Joi.object().keys({
+    serialNo: Joi.string()
+        .alphanum()
+        .min(3)
+        .max(25)
+        .required(),
+    manufacturedYear: Joi.number()
+        .integer()
+        .min(1900)
+        .required(),
+    type: Joi.string()
+        .valid(['TYPE-A','TYPE-B'])
+        .required(),
+});
+```
+
+> next we must define the `xpress-req-validator` configurations
+
+`config.js`
+```node
+import {DEVICE_SPEC} from './spec';
+
+export default {
+    specs: {
+        POST: {
+            '/device': {
+                body: DEVICE_SPEC,
+            },
+        },
+    },
+};
+```
+
+> now we can apply the `xpress-req-validator` to `deviceRouter`
+```node
+import express from 'express';
+import Validator from 'xpress-req-validator';
+
+import config from './config';
+
+const validator = new Validator(config);
+const deviceRouter = express.Router();
+deviceRouter.use(validator.init());
+
+deviceRouter.post('/device', ()=> {});
+```
+
+> That's how easy and clean `xpress-req-validator` does the job for you. Similarly we can validate the `header`, `path` & `query`
+of `GET`, `PUT` & `DELETE` requests. For more detailed examples please visit [GitBook](https://www.gitbook.com/)
+
 ### Changelog
 
 ### License
+MIT
