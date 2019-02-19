@@ -2,6 +2,7 @@
 
 Hassle free middleware to validate all type of requests in a single place while respecting the principle of separation of concerns
 
+[![npm version](https://img.shields.io/badge/npm-v1.0.0-red.svg)](https://www.npmjs.com/package/xpress-req-validator)
 [![Build Status](https://travis-ci.org/IamThilina/xpress-req-validator.svg?branch=master)](https://travis-ci.org/IamThilina/xpress-req-validator)
 [![Coverage Status](https://coveralls.io/repos/github/IamThilina/xpress-req-validator/badge.svg?branch=master)](https://coveralls.io/github/IamThilina/xpress-req-validator?branch=master)
 [![Code Climate](https://codeclimate.com/github/IamThilina/xpress-req-validator/badges/gpa.svg)](https://codeclimate.com/github/IamThilina/xpress-req-validator)

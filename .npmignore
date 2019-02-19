@@ -3,10 +3,6 @@ lib/
 gulpfile.js
 docs
 
-# Tests and Test examples
-# TODO Following line should be uncommented later
-# dist/tester.js
-
 # Config Files
 LICENSE
 .idea

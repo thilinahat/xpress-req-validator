@@ -1,8 +1,25 @@
 {
     "name": "xpress-req-validator",
     "version": "1.0.0",
-    "description": "hazzle free request validation middleware",
+    "description": "hassle free request validation middleware",
     "main": "index.js",
+    "author": "IamThilina",
+    "license": "MIT",
+    "homepage": "https://github.com/IamThilina/xpress-req-validator",
+    "keywords": [
+        "request validation",
+        "middleware",
+        "validation middleware",
+        "Joi validation middleware",
+        "express request validation",
+        "Joi schema validation"
+    ],
+    "bugs": "https://github.com/IamThilina/xpress-req-validator/issues",
+    "email": "333thilina@gmail.com",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/IamThilina/xpress-req-validator.git"
+    },
     "scripts": {
         "test": "jest --coverage lib/**/*.test.js",
         "coverage": "jest lib/**/*.test.js --coverage --coverageReporters=text-lcov | coveralls",
@@ -17,15 +34,6 @@
         "test"
     ],
     "pre-push": [],
-    "keywords": [
-        "request",
-        "request validation",
-        "middleware",
-        "validation middleware",
-        "Joi validation middleware"
-    ],
-    "author": "IamThilina",
-    "license": "MIT",
     "dependencies": {
         "joi": "^14.3.1"
     },
