@@ -24,6 +24,7 @@ It can be used at app level or router level.
 -   [Why xpress-req-validator](#why-xpress-req-validator)
 -   [Installation](#installation)
 -   [Basic Usage](#basic-usage)
+-   [Extended Documentation](#extended-documentation)
 -   [Changelog](#changelog)
 -   [License](#license)
 
@@ -115,6 +116,8 @@ export default {
 ```
 
 > now we can apply the `xpress-req-validator` to `deviceRouter`
+
+`deviceRouter.js`
 ```node
 import express from 'express';
 import Validator from 'xpress-req-validator';
@@ -129,7 +132,10 @@ deviceRouter.post('/device', ()=> {});
 ```
 
 > That's how easy and clean `xpress-req-validator` does the job for you. Similarly we can validate the `header`, `path` & `query`
-of `GET`, `PUT` & `DELETE` requests. For more detailed examples please visit [GitBook](https://www.gitbook.com/)
+of `GET`, `PUT` & `DELETE` requests
+
+### Extended Documentation
+For more detailed examples please visit [GitBook](https://iamthilina.gitbook.io/xpress-req-validator/)
 
 ### Changelog
 
